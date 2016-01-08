@@ -1,0 +1,14 @@
+<h2>List of Manufacturers</h2>
+
+<ul>
+  <% @manufacturers.each do |manufacturer| %>
+  <li>Name: <%=manufacturer.name%> (Country: <%=manufacturer.country%>)</li>
+  <% end %>
+</ul>
+
+
+<%= link_to "Add New Manufacturer", new_manufacturer_path%>
+<br>
+<%= link_to "Add New Car", new_car_path%>
+<br>
+<%= link_to "View Cars List", cars_path%>

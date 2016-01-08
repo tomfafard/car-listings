@@ -1,0 +1,19 @@
+<h1>Add a New Car:</h1>
+
+<%= form_for @car do |f| %>
+  <%= f.label :manufacturer_id %>
+  <%= f.collection_select :manufacturer_id, Manufacturer.all, :id, :name %>
+    </br>
+  <%= f.label :color, "Color" %>
+  <%= f.text_field :color %>
+    </br>
+  <%= f.label :year, "Year" %>
+  <%= f.number_field :year, min: 1920 %>
+    </br>
+  <%= f.label :mileage, "Mileage" %>
+  <%= f.number_field :mileage %>
+    </br>
+  <%= f.submit "Create Car" %>
+<% end %>
+
+<%= link_to 'Return to Cars', cars_path%>

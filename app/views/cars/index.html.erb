@@ -1,0 +1,17 @@
+<h2>List of Cars</h2>
+
+<ul>
+  <% @cars.each do |car| %>
+    <li><%=car.manufacturer.name%></li>
+    <ul>
+      <li><%=car.color%></li>
+      <li><%=car.year%></li>
+      <li><%=car.mileage%></li>
+    </ul>
+  <% end %>
+</ul>
+
+
+<%= link_to "Add New Car", new_car_path%>
+<br>
+<%= link_to "View Manufacturers List", manufacturers_path%>
